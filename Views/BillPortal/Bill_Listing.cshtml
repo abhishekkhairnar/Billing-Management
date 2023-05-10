@@ -1,0 +1,442 @@
+﻿
+
+<!-- Sidebar -->
+<div class="sidebar" id="sidebar">
+	<div class="sidebar-inner slimscroll">
+		<div id="sidebar-menu" class="sidebar-menu">
+			<ul>
+				<li class="menu-title">
+					<span>Main</span>
+				</li>
+				<li class="submenu">
+					<a href="#"><i class="la la-dashboard"></i> <span> Dashboard</span> <span class="menu-arrow"></span></a>
+					<ul style="display: none;">
+						<!-- <li><a href="index.html">Admin Dashboard</a></li>
+						<li><a href="employee-dashboard.html">Employee Dashboard</a></li> -->
+					</ul>
+				</li>
+
+				<li class="active">
+					<a href="bill.html"><i class="la la-ticket"></i> <span>Bills</a>
+				</li>
+				<li class="activ">
+					<a href="vendor-bill.html"><i class="la la-ticket"></i> <span>Vendor Bill</span></a>
+				</li>
+				<li class="menu-title">
+					<span>HR</span>
+				</li>
+				<li class="activ">
+					<a href="vendor-master.html"><i class="la la-files-o"></i> <span>Vendor Master</span></a>
+				</li>
+
+
+				<li>
+					<a href="users.html"><i class="la la-user-plus"></i> <span>Users</span></a>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- /Sidebar -->
+<!-- Page Wrapper -->
+<div class="page-wrapper">
+
+	<!-- Page Content -->
+	<div class="content container-fluid">
+
+		<!-- Page Header -->
+		<div class="page-header">
+			<div class="row align-items-center">
+				<div class="col">
+					<h3 class="page-title">Bills</h3>
+					<ul class="breadcrumb">
+						<li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+						<li class="breadcrumb-item active">Bills</li>
+					</ul>
+				</div>
+				<!-- <div class="col-auto float-right ml-auto">
+					<a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_ticket"><i class="fa fa-plus"></i>Bill Listing
+					</a>
+				</div> -->
+			</div>
+		</div>
+		<!-- /Page Header -->
+		<!-- Search Filter -->
+		<div class="row filter-row">
+			<div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
+				<div class="form-group form-focus">
+					<input type="text" class="form-control floating">
+					<label class="focus-label">Employee Name</label>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
+				<div class="form-group form-focus select-focus">
+					<select class="select floating">
+						<option> -- Select -- </option>
+						<option> Pending </option>
+						<option> Approved </option>
+						<option> Returned </option>
+					</select>
+					<label class="focus-label">Status</label>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
+				<div class="form-group form-focus select-focus">
+					<select class="select floating">
+						<option> -- Select -- </option>
+						<option> High </option>
+						<option> Low </option>
+						<option> Medium </option>
+					</select>
+					<label class="focus-label">Priority</label>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
+				<div class="form-group form-focus">
+					<div class="cal-icon">
+						<input class="form-control floating datetimepicker" type="text">
+					</div>
+					<label class="focus-label">From</label>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
+				<div class="form-group form-focus">
+					<div class="cal-icon">
+						<input class="form-control floating datetimepicker" type="text">
+					</div>
+					<label class="focus-label">To</label>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
+				<a href="#" class="btn btn-success btn-block"> Search </a>
+			</div>
+		</div>
+		<!-- /Search Filter -->
+
+		<div class="row">
+			<div class="col-md-12">
+				<div class="table-responsive">
+					<table class="table table-striped custom-table mb-0 datatable">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>Date</th>
+								<th>Vendor  Name</th>
+
+								<th>Bills no</th>
+								<th>Commentss</th>
+								<th>Attachment</th>
+								<th class="text-center">Status</th>
+								<th class="text-right">Actions</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>1/5/2023</td>
+
+								<td>XYZ</td>
+								<td>2</td>
+								<td>Bill of march</td>
+								<td>attached</td>
+								<td>Reject  Approve</td>
+
+								<td class="text-right">
+									<div class="dropdown dropdown-action">
+										<a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+										<div class="dropdown-menu dropdown-menu-right">
+											<a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit_ticket"><i class="fa fa-pencil m-r-5"></i> Edit</a>
+											<a class="dropdown-item" href="invoice-view.html"><i class="fa fa-eye m-r-5"></i> View</a>
+											<a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_ticket"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>1/5/2023</td>
+
+								<td>XYZ</td>
+								<td>2</td>
+								<td>Bill of march</td>
+								<td>attached</td>
+								<td>ok</td>
+
+								<td class="text-right">
+									<div class="dropdown dropdown-action">
+										<a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+										<div class="dropdown-menu dropdown-menu-right">
+											<a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit_ticket"><i class="fa fa-pencil m-r-5"></i> Edit</a>
+											<a class="dropdown-item" href="invoice-view.html"><i class="fa fa-eye m-r-5"></i> View</a>
+											<a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_ticket"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /Page Content -->
+	<!-- Add Ticket Modal -->
+	<div id="add_ticket" class="modal custom-modal fade" role="dialog">
+		<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Bill </h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="form-group">
+									<label>Vendor Company Name <span class="text-danger">*</span></label>
+									<input class="form-control" type="text">
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<div class="form-group">
+									<label> Email <span class="text-danger">*</span></label>
+									<input class="form-control" type="text">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="form-group">
+									<label>Contact Number <span class="text-danger">*</span></label>
+									<input type="text" class="form-control">
+								</div>
+
+							</div>
+							<div class="col-sm-6">
+								<div class="form-group">
+									<label>Contact Person <span class="text-danger">*</span></label>
+									<input type="text" class="form-control">
+								</div>
+
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="form-group">
+									<label>TAN No <span class="text-danger">*</span></label>
+									<input class="form-control" type="text">
+								</div>
+
+							</div>
+							<div class="col-sm-6">
+								<div class="form-group">
+									<label>GST No <span class="text-danger">*</span></label>
+									<input class="form-control" type="text">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="form-group" data-select2-id="select2-data-33-43sl">
+
+									<label> Service Type <span class="text-danger">*</span></label>
+									<select class="select select2-hidden-accessible" data-select2-id="select2-data-19-s38y" tabindex="-1" aria-hidden="true">
+										<option data-select2-id="select2-data-21-0jxr"></option>
+										<option data-select2-id="select2-data-35-1yah">F </option>
+										<option data-select2-id="select2-data-36-oyc4">A</option>
+										<option data-select2-id="select2-data-37-nuvx">I</option>
+										<option data-select2-id="select2-data-38-eq43">P</option>
+
+									</select>
+								</div>
+
+							</div>
+							<div class="col-sm-6">
+								<div class="form-group">
+									<label>Bill <span class="text-danger">*</span></label>
+									<input class="form-control" type="text">
+								</div>
+
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="form-group">
+									<label>Address <span class="text-danger">*</span></label>
+									<input class="form-control" type="text">
+								</div>
+
+
+							</div>
+							<div class="col-sm-6">
+								<div class="form-group">
+									<label>Comment <span class="text-danger">*</span></label>
+									<input class="form-control" type="text">
+								</div>
+
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label> Attahment  <span class="text-danger">*</span></label>
+									<input class="form-control" type="file">
+								</div>
+							</div>
+							<div class="col-md-6"></div>
+						</div>
+
+						<div class="submit-section">
+							<button class="btn btn-primary submit-btn">Submit</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /Add Ticket Modal -->
+	<!-- Edit Ticket Modal -->
+	<div id="edit_ticket" class="modal custom-modal fade" role="dialog">
+		<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Edit Bill </h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="form-group">
+									<label>Vendor Company Name <span class="text-danger">*</span></label>
+									<input class="form-control" type="text">
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<div class="form-group">
+									<label> Email <span class="text-danger">*</span></label>
+									<input class="form-control" type="text">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="form-group">
+									<label>Contact Number <span class="text-danger">*</span></label>
+									<input type="text" class="form-control">
+								</div>
+
+							</div>
+							<div class="col-sm-6">
+								<div class="form-group">
+									<label>Contact Person <span class="text-danger">*</span></label>
+									<input type="text" class="form-control">
+								</div>
+
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="form-group">
+									<label>TAN No <span class="text-danger">*</span></label>
+									<input class="form-control" type="text">
+								</div>
+
+							</div>
+							<div class="col-sm-6">
+								<div class="form-group">
+									<label>GST No <span class="text-danger">*</span></label>
+									<input class="form-control" type="text">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="form-group">
+
+									<label> Service Type <span class="text-danger">*</span></label>
+									<select class="select select2-hidden-accessible" data-select2-id="select2-data-13-uw0g" tabindex="-1" aria-hidden="true">
+										<option data-select2-id="select2-data-15-k1nd">f</option>
+										<option></option>
+										<option>m</option>
+										<option>P</option>
+									</select>
+								</div>
+
+							</div>
+							<div class="col-sm-6">
+								<div class="form-group">
+									<label>Bill <span class="text-danger">*</span></label>
+									<input class="form-control" type="text">
+								</div>
+
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="form-group">
+									<label>Address <span class="text-danger">*</span></label>
+									<input class="form-control" type="text">
+								</div>
+
+
+							</div>
+							<div class="col-sm-6">
+								<div class="form-group">
+									<label>Comment <span class="text-danger">*</span></label>
+									<input class="form-control" type="text">
+								</div>
+
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label> Attahment  <span class="text-danger">*</span></label>
+									<input class="form-control" type="file">
+								</div>
+							</div>
+							<div class="col-md-6"></div>
+						</div>
+
+						<div class="submit-section">
+							<button class="btn btn-primary submit-btn">Submit</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /Edit Ticket Modal -->
+	<!-- Delete Ticket Modal -->
+	<div class="modal custom-modal fade" id="delete_ticket" role="dialog">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-body">
+					<div class="form-header">
+						<h3>Delete Ticket</h3>
+						<p>Are you sure want to delete?</p>
+					</div>
+					<div class="modal-btn delete-action">
+						<div class="row">
+							<div class="col-6">
+								<a href="javascript:void(0);" class="btn btn-primary continue-btn">Delete</a>
+							</div>
+							<div class="col-6">
+								<a href="javascript:void(0);" data-dismiss="modal" class="btn btn-primary cancel-btn">Cancel</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /Delete Ticket Modal -->
+
+</div>
+<!-- /Page Wrapper -->

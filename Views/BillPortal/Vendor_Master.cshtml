@@ -1,0 +1,391 @@
+﻿<!-- Sidebar -->
+<div class="sidebar" id="sidebar">
+	<div class="sidebar-inner slimscroll">
+		<div id="sidebar-menu" class="sidebar-menu">
+			<ul>
+				<li class="menu-title">
+					<span>Main</span>
+				</li>
+				<li class="submenu">
+					<a href="#"><i class="la la-dashboard"></i> <span> Dashboard</span> <span class="menu-arrow"></span></a>
+					<ul style="display: none;">
+						<!-- <li><a href="index.html">Admin Dashboard</a></li>
+						<li><a href="employee-dashboard.html">Employee Dashboard</a></li> -->
+					</ul>
+				</li>
+				<li class="activ">
+					<a asp-controller="BillPortal" asp-action="Bill"><i class="la la-ticket"></i> <span>Bills</span></a>
+				</li>
+				<li class="activ">
+					<a asp-controller="BillPortal" asp-action="Vendor_Bill"><i class="la la-ticket"></i> <span>Vendor Bill</span></a>
+				</li>
+				<li class="menu-title">
+					<span>HR</span>
+				</li>
+				<li class="active">
+					<a asp-controller="BillPortal" asp-action="Vendor_Master"><i class="la la-files-o"></i> <span>Vendor Master</span></a>
+				</li>
+				<li class="activ">
+					<a asp-controller="BillPortal" asp-action="User"><i class="la la-user-plus"></i> <span>Users</span></a>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- /Sidebar -->
+<!-- Page Wrapper -->
+<div class="page-wrapper">
+
+	<!-- Page Content -->
+	<div class="content container-fluid">
+
+		<!-- Page Header -->
+		<div class="page-header">
+			<div class="row align-items-center">
+				<div class="col">
+					<h3 class="page-title">Vendor Master</h3>
+					<ul class="breadcrumb">
+						<li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+						<li class="breadcrumb-item active">Vendor Master</li>
+					</ul>
+				</div>
+				<div class="col-auto float-right ml-auto">
+					<a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_expense"><i class="fa fa-plus"></i>Add Vendor Master</a>
+				</div>
+			</div>
+		</div>
+		<!-- /Page Header -->
+		<!-- Search Filter -->
+		<div class="row filter-row">
+			<div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
+				<div class="form-group form-focus">
+					<input type="text" class="form-control floating">
+					<label class="focus-label">Item Name</label>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
+				<div class="form-group form-focus select-focus">
+					<select class="select floating">
+						<option> -- Select -- </option>
+						<option>Loren Gatlin</option>
+						<option>Tarah Shropshire</option>
+					</select>
+					<label class="focus-label">Purchased By</label>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
+				<div class="form-group form-focus select-focus">
+					<select class="select floating">
+						<option> -- Select -- </option>
+						<option> Cash </option>
+						<option> Cheque </option>
+					</select>
+					<label class="focus-label">Paid By</label>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
+				<div class="form-group form-focus">
+					<div class="cal-icon">
+						<input class="form-control floating datetimepicker" type="text">
+					</div>
+					<label class="focus-label">From</label>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
+				<div class="form-group form-focus">
+					<div class="cal-icon">
+						<input class="form-control floating datetimepicker" type="text">
+					</div>
+					<label class="focus-label">To</label>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
+				<a href="#" class="btn btn-success btn-block"> Search </a>
+			</div>
+		</div>
+		<!-- /Search Filter -->
+
+		<div class="row">
+			<div class="col-md-12">
+				<div class="table-responsive">
+					<table class="table table-striped custom-table mb-0 datatable">
+						<thead>
+							<tr>
+
+								<th>Vendor Company Name</th>
+								<th> Email</th>
+								<th>Address</th>
+								<th>GST No</th>
+								<th>CIN</th>
+								<th>Contact Person</th>
+								<th>Contact Number</th>
+
+								<th class="text-right">Actions</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>XYZ</td>
+								<td>Account@ncs.com</td>
+								<td> Pune</td>
+								<td>15</td>
+								<td>5576576</td>
+								<td>XYZ</td>
+								<td>9021155132</td>
+
+
+								<td class="text-right">
+									<div class="dropdown dropdown-action">
+										<a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+										<div class="dropdown-menu dropdown-menu-right">
+											<a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit_expense"><i class="fa fa-pencil m-r-5"></i> Edit</a>
+											<a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_expense"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>XYZ</td>
+								<td>Account@ncs.com</td>
+								<td> Pune</td>
+								<td>15</td>
+								<td>5576576</td>
+								<td>XYZ</td>
+								<td>9021155132</td>
+
+								<td class="text-right">
+									<div class="dropdown dropdown-action">
+										<a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+										<div class="dropdown-menu dropdown-menu-right">
+											<a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit_expense"><i class="fa fa-pencil m-r-5"></i> Edit</a>
+											<a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_expense"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /Page Content -->
+	<!-- Add Expense Modal -->
+	<div id="add_expense" class="modal custom-modal fade" role="dialog">
+		<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Add Vendor Master</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Vendor Company Name <span class="text-danger">*</span></label>
+									<input class="form-control" type="text">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Email <span class="text-danger">*</span></label>
+									<input class="form-control" type="text">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Contact Person <span class="text-danger">*</span></label>
+									<input class="form-control" type="text">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Contact Number <span class="text-danger">*</span></label>
+									<input class="form-control" type="text">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>GST No <span class="text-danger">*</span></label>
+									<input class="form-control" type="text">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>CIN <span class="text-danger">*</span></label>
+									<input class="form-control" type="text">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Password<span class="text-danger">*</span></label>
+									<input class="form-control" type="text">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group" data-select2-id="select2-data-14-06fn">
+									<label>Service Type<span class="text-danger">*</span></label>
+									<select class="select select2-hidden-accessible" data-select2-id="select2-data-7-5pln" tabindex="-1" aria-hidden="true">
+										<option data-select2-id="select2-data-9-xjcm">Select Access Point</option>
+										<option data-select2-id="select2-data-16-yl1o">Registration</option>
+										<option data-select2-id="select2-data-17-dkhm">Tare weight Point</option>
+										<option data-select2-id="select2-data-18-nwyy">Gross weight Point</option>
+										<option data-select2-id="select2-data-18-nwyy">Loading point</option>
+										<option data-select2-id="select2-data-18-nwyy">unloading point</option>
+										<option data-select2-id="select2-data-18-nwyy">invoice Point</option>
+									</select>
+								</div>
+
+							</div>
+
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Address <span class="text-danger">*</span></label>
+									<input class="form-control" type="text">
+								</div>
+							</div>
+						</div>
+
+						<div class="submit-section">
+							<button class="btn btn-primary submit-btn">Submit</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /Add Expense Modal -->
+	<!-- Edit Expense Modal -->
+	<div id="edit_expense" class="modal custom-modal fade" role="dialog">
+		<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Edit Vendor Master </h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Vendor Company Name <span class="text-danger">*</span></label>
+									<input class="form-control" type="text">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Email <span class="text-danger">*</span></label>
+									<input class="form-control" type="text">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Contact Person <span class="text-danger">*</span></label>
+									<input class="form-control" type="text">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Contact Number <span class="text-danger">*</span></label>
+									<input class="form-control" type="text">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>GST No <span class="text-danger">*</span></label>
+									<input class="form-control" type="text">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>CIN <span class="text-danger">*</span></label>
+									<input class="form-control" type="text">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Password<span class="text-danger">*</span></label>
+									<input class="form-control" type="text">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group" data-select2-id="select2-data-26-fgdx">
+
+									<label>Service Type<span class="text-danger">*</span></label>
+									<select class="select select2-hidden-accessible" data-select2-id="select2-data-13-78ka" tabindex="-1" aria-hidden="true">
+										<option data-select2-id="select2-data-15-jv42">Account</option>
+										<option data-select2-id="select2-data-30-fjke">manager</option>
+										<option data-select2-id="select2-data-31-v01j">Plant Head</option>
+									</select>
+
+								</div>
+
+
+							</div>
+
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Address <span class="text-danger">*</span></label>
+									<input class="form-control" type="text">
+								</div>
+							</div>
+						</div>
+
+						<div class="submit-section">
+							<button class="btn btn-primary submit-btn">Submit</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /Edit Expense Modal -->
+	<!-- Delete Expense Modal -->
+	<div class="modal custom-modal fade" id="delete_expense" role="dialog">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-body">
+					<div class="form-header">
+						<h3>Delete Expense</h3>
+						<p>Are you sure want to delete?</p>
+					</div>
+					<div class="modal-btn delete-action">
+						<div class="row">
+							<div class="col-6">
+								<a href="javascript:void(0);" class="btn btn-primary continue-btn">Delete</a>
+							</div>
+							<div class="col-6">
+								<a href="javascript:void(0);" data-dismiss="modal" class="btn btn-primary cancel-btn">Cancel</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Delete Expense Modal -->
+
+</div>
+<!-- /Page Wrapper -->

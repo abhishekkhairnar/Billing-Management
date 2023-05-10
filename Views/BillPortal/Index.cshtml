@@ -1,32 +1,7 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-	<meta name="description" content="Smarthr - Bootstrap Admin Template">
-	<meta name="keywords" content="admin, estimates, bootstrap, business, corporate, creative, management, minimal, modern, accounts, invoice, html5, responsive, CRM, Projects">
-	<meta name="author" content="Dreamguys - Bootstrap Admin Template">
-	<meta name="robots" content="noindex, nofollow">
-	<title>Login</title>
-
-	<!-- Favicon -->
-	<link rel="shortcut icon" type="image/x-icon" href="~/img/favicon.png">
-
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="~/css/bootstrap.min.css">
-
-	<!-- Fontawesome CSS -->
-	<link rel="stylesheet" href="~/css/font-awesome.min.css">
-
-	<!-- Main CSS -->
-	<link rel="stylesheet" href="~/css/style.css">
-
-	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!--[if lt IE 9]>
-		<script src="~/js/html5shiv.min.js"></script>
-		<script src="~/js/respond.min.js"></script>
-	<![endif]-->
-</head>
+﻿@model UserModel
+@{
+	Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
 <body class="account-page">
 
 	<!-- Main Wrapper -->
@@ -37,8 +12,8 @@
 
 				<!-- Account Logo -->
 				<div class="account-logo">
-					<a href="bill-listing.html"><img src="~/img/logo.png" alt="Dreamguy's Technologies"></a>
-				</div>
+					<a href="bill-listing.html"><img src="~/image/logo.png" alt="Dreamguy's Technologies"></a>
+                </div>
 				<!-- /Account Logo -->
 
 				<div class="account-box">
@@ -47,10 +22,16 @@
 						<p class="account-subtitle">Access to our dashboard</p>
 
 						<!-- Account Form -->
-						<form action="bill-listing.html">
+						<form asp-action="Login" method="post">
+							<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+							<div class="form-group text-danger">
+								@if(ViewData["ErrorFlag"] != null){
+									@ViewData["ErrorFlag"];
+								}
+							</div>
 							<div class="form-group">
 								<label>Email Address</label>
-								<input class="form-control" type="text">
+								<input class="form-control" type="email" name="email" required/>
 							</div>
 							<div class="form-group">
 								<div class="row">
@@ -63,10 +44,15 @@
 										</a>
 									</div>
 								</div>
-								<input class="form-control" type="password">
+								<input class="form-control" type="password" name="Pwd" required />
+							</div>
+							<div>
+								<span></span>
 							</div>
 							<div class="form-group text-center">
-								<button class="btn btn-primary account-btn" type="submit">Login</button>
+								@*<button class="btn btn-primary account-btn" asp->Login</button>*@
+								@*<input type="submit" class="btn btn-primary account-btn" value="Login"/>*@
+								<a asp-controller="BillPortal" asp-action="User" class="btn btn-primary account-btn">Login</a>
 							</div>
 							<div class="account-footer">
 								<p>Don't have an account yet? <a href="register.html">Register</a></p>

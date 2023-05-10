@@ -1,0 +1,434 @@
+﻿@model UserModel
+
+<!-- Sidebar -->
+<div class="sidebar" id="sidebar">
+	<div class="sidebar-inner slimscroll">
+		<div id="sidebar-menu" class="sidebar-menu">
+			<ul>
+
+				<li class="menu-title">
+					<span>Main</span>
+				</li>
+
+				<li class="submenu">
+					<a href="#"><i class="la la-dashboard"></i> <span> Dashboard</span> <span class="menu-arrow"></span></a>
+					<ul style="display: none;">
+						<!-- <li><a href="index.html">Admin Dashboard</a></li>
+						<li><a href="employee-dashboard.html">Employee Dashboard</a></li> -->
+					</ul>
+				</li>
+
+				<li class="activ">
+					<a asp-controller="BillPortal" asp-action="Bill"><i class="la la-ticket"></i> <span>Bills</span></a>
+				</li>
+				<li class="activ">
+					<a asp-controller="BillPortal" asp-action="Vendor_Bill"><i class="la la-ticket"></i> <span>Vendor Bill</span></a>
+				</li>
+				<li class="menu-title">
+					<span>HR</span>
+				</li>
+				<li>
+					<a asp-controller="BillPortal" asp-action="Vendor_Master"><i class="la la-files-o"></i> <span>Vendor Master</span></a>
+				</li>
+				<li class="active">
+					<a asp-controller="BillPortal" asp-action="User"><i class="la la-user-plus"></i> <span>Users</span></a>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- /Sidebar -->
+<!-- Page Wrapper -->
+<div class="page-wrapper">
+
+	<!-- Page Content -->
+	<div class="content container-fluid">
+
+		<!-- Page Header -->
+		<div class="page-header">
+			<div class="row align-items-center">
+				<div class="col">
+					<h3 class="page-title">Users</h3>
+					<ul class="breadcrumb">
+						<li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+						<li class="breadcrumb-item active">Users</li>
+					</ul>
+				</div>
+				<div class="col-auto float-right ml-auto">
+					<a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_user"><i class="fa fa-plus"></i> Add User</a>
+				</div>
+			</div>
+		</div>
+		<!-- /Page Header -->
+		<!-- Search Filter -->
+		<div class="row filter-row">
+			<div class="col-sm-6 col-md-3">
+				<div class="form-group form-focus">
+					<input type="text" class="form-control floating">
+					<label class="focus-label">Name</label>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-3">
+				<div class="form-group form-focus select-focus">
+					<select class="select floating">
+						<option>Select Company</option>
+						<option>Global Technologies</option>
+						<option>Delta Infotech</option>
+					</select>
+					<label class="focus-label">Company</label>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-3">
+				<div class="form-group form-focus select-focus">
+					<select class="select floating">
+						<option>Select Roll</option>
+						<option>Web Developer</option>
+						<option>Web Designer</option>
+						<option>Android Developer</option>
+						<option>Ios Developer</option>
+					</select>
+					<label class="focus-label">Role</label>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-3">
+				<a href="#" class="btn btn-success btn-block"> Search </a>
+			</div>
+		</div>
+		<!-- /Search Filter -->
+
+		<div class="row">
+			<div class="col-md-12">
+				<div class="table-responsive">
+					<table class="table table-striped custom-table datatable">
+						<thead>
+							<tr>
+								<th>Username</th>
+								<th>Email</th>
+
+								<th>Role</th>
+								<th>Department</th>
+								<th class="text-right">Action</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<h2 class="table-avatar">
+										<a href="profile.html" class="avatar"><img src="assets/img/profiles/avatar-21.jpg" alt=""></a>
+										<a href="profile.html">Daniel Porter <span>Admin</span></a>
+									</h2>
+								</td>
+								<td>danielporter@example.com</td>
+
+								<td>
+									<span class="badge bg-inverse-danger">manager</span>
+								</td>
+								<td>it</td>
+								<td class="text-right">
+									<div class="dropdown dropdown-action">
+										<a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+										<div class="dropdown-menu dropdown-menu-right">
+											<a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit_user"><i class="fa fa-pencil m-r-5"></i> Edit</a>
+											<a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_user"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<h2 class="table-avatar">
+										<a href="profile.html" class="avatar"><img src="assets/img/profiles/avatar-21.jpg" alt=""></a>
+										<a href="profile.html">Daniel Porter <span>Admin</span></a>
+									</h2>
+								</td>
+								<td>danielporter@example.com</td>
+
+								<td>
+									<span class="badge bg-inverse-danger">Plant Head</span>
+								</td>
+								<td>it</td>
+								<td class="text-right">
+									<div class="dropdown dropdown-action">
+										<a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+										<div class="dropdown-menu dropdown-menu-right">
+											<a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit_user"><i class="fa fa-pencil m-r-5"></i> Edit</a>
+											<a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_user"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<h2 class="table-avatar">
+										<a href="profile.html" class="avatar"><img src="assets/img/profiles/avatar-21.jpg" alt=""></a>
+										<a href="profile.html">Daniel Porter <span>Admin</span></a>
+									</h2>
+								</td>
+								<td>danielporter@example.com</td>
+
+								<td>
+									<span class="badge bg-inverse-danger">Admin</span>
+								</td>
+								<td>it</td>
+								<td class="text-right">
+									<div class="dropdown dropdown-action">
+										<a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+										<div class="dropdown-menu dropdown-menu-right">
+											<a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit_user"><i class="fa fa-pencil m-r-5"></i> Edit</a>
+											<a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_user"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<h2 class="table-avatar">
+										<a href="profile.html" class="avatar"><img src="assets/img/profiles/avatar-21.jpg" alt=""></a>
+										<a href="profile.html">Daniel Porter <span>Admin</span></a>
+									</h2>
+								</td>
+								<td>danielporter@example.com</td>
+
+								<td>
+									<span class="badge bg-inverse-danger">Admin</span>
+								</td>
+								<td>it</td>
+								<td class="text-right">
+									<div class="dropdown dropdown-action">
+										<a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+										<div class="dropdown-menu dropdown-menu-right">
+											<a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit_user"><i class="fa fa-pencil m-r-5"></i> Edit</a>
+											<a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_user"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+										</div>
+									</div>
+								</td>
+							</tr>
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /Page Content -->
+	<!-- Add User Modal -->
+	<div id="add_user" class="modal custom-modal fade" role="dialog">
+		<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Add User</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form asp-action="RegisterUser" >
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="form-group">
+									<label>Full Name <span class="text-danger">*</span></label>
+									<input asp-for="FullName" type="text" class="form-control" required>
+									<span asp-validation-for="FullName" class="text-danger" ></span>
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<div class="form-group">
+									<label>Email<span class="text-danger">*</span></label>
+									<input asp-for="Email" type="email" class="form-control" required>
+									<span asp-validation-for="Email" class="text-danger"></span>
+								</div>
+
+							</div>
+							<div class="col-sm-6">
+								<div class="form-group">
+									<label>Password <span class="text-danger">*</span></label>
+									<input asp-for="Password" type="password" class="form-control" minlength="6" maxlength="15" required>
+									<span asp-validation-for="Password" class="text-danger"></span>
+								</div>
+
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Role <span class="text-danger">*</span></label>
+									<select asp-for="Role" class="select" required>
+										<option value="">Select Role</option>
+										<option value="Account">Account</option>
+										<option value="Manager">manager</option>
+										<option value ="Plant Head">Plant Head</option>
+									</select>
+									<span asp-validation-for="Role" class="text-danger"></span>
+								</div>
+							</div>
+							
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Reporting to <span class="text-danger">*</span></label>
+									<select asp-for="ReportingTo" class="select" required>
+										<option value="">Reporting to</option>
+										<option value="Account">Account</option>
+										<option value="Manager">manager</option>
+										<option value="Plant Head">Plant Head</option>
+									</select>
+									<span asp-validation-for="ReportingTo" class="text-danger"></span>
+								</div>
+							</div>
+
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Department <span class="text-danger">*</span></label>
+									<select asp-for="Department" class="select" required>
+										<option value="">Select Department</option>
+										<option value="IT">IT</option>
+										<option value="Finance">Finance</option>
+										<option value="Admin">Admin</option>
+										<option value="Production">Production</option>
+									</select>
+									<span asp-validation-for="Department" class="text-danger"></span>
+								</div>
+							</div>
+
+
+						</div>
+						@*<div class="table-responsive m-t-15">
+							<table class="table table-striped custom-table">
+								<thead>
+								</thead>
+								<tbody>
+								</tbody>
+							</table>
+						</div>*@
+						<div class="submit-section">
+							<button class="btn btn-primary submit-btn">Submit</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /Add User Modal -->
+	<!-- Edit User Modal -->
+	<div id="edit_user" class="modal custom-modal fade" role="dialog">
+		<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Edit User</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="row">
+
+							<div class="col-sm-6">
+								<div class="form-group">
+									<label>First Name <span class="text-danger">*</span></label>
+									<input class="form-control" type="text">
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<div class="form-group">
+									<label>Last Name <span class="text-danger">*</span></label>
+									<input class="form-control" type="text">
+								</div>
+
+							</div>
+							<div class="col-sm-6">
+								<div class="form-group">
+									<label>Email <span class="text-danger">*</span></label>
+									<input class="form-control" type="email">
+								</div>
+
+							</div>
+							<div class="col-sm-6">
+								<div class="form-group">
+									<label>Password</label>
+									<input class="form-control" type="password">
+								</div>
+
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+
+									<label>Role</label>
+									<select class="select">
+										<option>Account</option>
+										<option>manager</option>
+										<option>Plant Head</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+
+									<label>Department</label>
+									<select class="select">
+										<option></option>
+										<option>Finance Department </option>
+										<option>Admin Department</option>
+										<option>IT Department</option>
+										<option>Production</option>
+
+									</select>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+
+									<label>Reporting to</label>
+									<select class="select">
+										<option>Account</option>
+										<option>manager</option>
+										<option>Plant Head</option>
+									</select>
+								</div>
+							</div>
+
+
+
+						</div>
+						<div class="table-responsive m-t-15">
+							<table class="table table-striped custom-table">
+								<thead>
+								</thead>
+								<tbody>
+								</tbody>
+							</table>
+						</div>
+						<div class="submit-section">
+							<button class="btn btn-primary submit-btn">Submit</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /Edit User Modal -->
+	<!-- Delete User Modal -->
+	<div class="modal custom-modal fade" id="delete_user" role="dialog">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-body">
+					<div class="form-header">
+						<h3>Delete User</h3>
+						<p>Are you sure want to delete?</p>
+					</div>
+					<div class="modal-btn delete-action">
+						<div class="row">
+							<div class="col-6">
+								<a href="javascript:void(0);" class="btn btn-primary continue-btn">Delete</a>
+							</div>
+							<div class="col-6">
+								<a href="javascript:void(0);" data-dismiss="modal" class="btn btn-primary cancel-btn">Cancel</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /Delete User Modal -->
+
+</div>
+<!-- /Page Wrapper -->

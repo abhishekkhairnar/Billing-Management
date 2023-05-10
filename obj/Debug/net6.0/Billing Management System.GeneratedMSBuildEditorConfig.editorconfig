@@ -16,16 +16,36 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\DARSHAN KHAIRNAR\source\repos\Billing Management System\Billing Management System
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/DARSHAN KHAIRNAR/source/repos/Billing Management System/Billing Management System/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[C:/Users/DARSHAN KHAIRNAR/source/repos/Billing Management System/Billing Management System/Views/BillPortal/Bill.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmlsbFBvcnRhbFxCaWxsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DARSHAN KHAIRNAR/source/repos/Billing Management System/Billing Management System/Views/BillPortal/Bill_Listing.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmlsbFBvcnRhbFxCaWxsX0xpc3RpbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DARSHAN KHAIRNAR/source/repos/Billing Management System/Billing Management System/Views/BillPortal/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmlsbFBvcnRhbFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DARSHAN KHAIRNAR/source/repos/Billing Management System/Billing Management System/Views/BillPortal/User.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmlsbFBvcnRhbFxVc2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DARSHAN KHAIRNAR/source/repos/Billing Management System/Billing Management System/Views/BillPortal/Vendor_Bill.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmlsbFBvcnRhbFxWZW5kb3JfQmlsbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DARSHAN KHAIRNAR/source/repos/Billing Management System/Billing Management System/Views/BillPortal/Vendor_Master.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmlsbFBvcnRhbFxWZW5kb3JfTWFzdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DARSHAN KHAIRNAR/source/repos/Billing Management System/Billing Management System/Views/Home/Bill.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxCaWxsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/DARSHAN KHAIRNAR/source/repos/Billing Management System/Billing Management System/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/DARSHAN KHAIRNAR/source/repos/Billing Management System/Billing Management System/Views/Login/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/DARSHAN KHAIRNAR/source/repos/Billing Management System/Billing Management System/Views/Shared/Error.cshtml]
@@ -34,6 +54,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/DARSHAN KHAIRNAR/source/repos/Billing Management System/Billing Management System/Views/Shared/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DARSHAN KHAIRNAR/source/repos/Billing Management System/Billing Management System/Views/Shared/_LayoutLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/DARSHAN KHAIRNAR/source/repos/Billing Management System/Billing Management System/Views/Shared/_ValidationScriptsPartial.cshtml]
